@@ -2,6 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         
+        
         {
             "name": "C/C++: gcc-13 Compilar e depurar o arquivo ativo",
             "type": "cppdbg",
