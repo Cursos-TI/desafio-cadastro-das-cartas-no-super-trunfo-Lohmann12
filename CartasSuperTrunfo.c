@@ -2,7 +2,8 @@
 
 
 int main() {
-    printf("Desafio do jogo Super Trunfo Mestre\n\n");
+    printf("Desafio do jogo Super Trunfo Novato\n\n");
+    // Com as regras de condição adicionadas.
 
     char pais1[2];
     char pais2[2];
@@ -64,21 +65,60 @@ int main() {
     scanf("%f", &pib2);
         densidadePopulacional2 = populacao2 / area2;
         pibPerCapita2 = pib2 / populacao2;
-        superTrunfo2 = populacao2 + area2 + pib2 + pibPerCapita2 + (1 / densidadePopulacional2);
+        superTrunfo2 = populacao2 + area2 + pib2 + pibPerCapita2 + (1 / densidadePopulacional2); // Essa divisão sugerida na aula anterior \
+        dividindo 1 pela densidade populacional, fiz dessa maneira, mas confesso que não compreendi bem se era assim que deveria ser feito.
     printf("A densidade populacional do %s é %.2f habitantes por km².\n", nome2, densidadePopulacional2);
     printf("O PIB per capita do %s é de R$%.2f.\n", nome2, pibPerCapita2);
     printf("O super trunfo da 2° carta é: %.2f\n\n", superTrunfo2);
 
-    printf("1° carta: %s%s - %s - População: %lu Milhões - Área: %.2f km² - PIB: R$%.2f - Densidade Populacional: %.2f habitantes por km² - PIB per Capita: R$%.2f - Super Trunfo: %.2f\n", pais1, codPais1, nome1, populacao1, area1, pib1, densidadePopulacional1, pibPerCapita1, superTrunfo1);
-    printf("2° carta: %s%s - %s - População: %lu Milhões - Área: %.2f km² - PIB: R$%.2f - Densidade Populacional: %.2f habitantes por km² - PIB per Capita: R$%.2f - Super Trunfo: %.2f\n\n", pais2, codPais2, nome2, populacao2, area2, pib2, densidadePopulacional2, pibPerCapita2, superTrunfo2);
+    printf("1° carta: %s%s - %s - População: %lu Milhões - Área: %.2f km² - PIB: R$%.2f \
+        - Densidade Populacional: %.2f habitantes por km² - PIB per Capita: R$%.2f - Super Trunfo: %.2f\n", \
+        pais1, codPais1, nome1, populacao1, area1, pib1, densidadePopulacional1, pibPerCapita1, superTrunfo1);
+        // Descobri como quebrar linhas dentro do código, facilita muito a visualização.
+    printf("2° carta: %s%s - %s \
+        - População: %lu Milhões \
+        - Área: %.2f km² \
+        - PIB: R$%.2f \
+        - Densidade Populacional: %.2f habitantes por km² \
+        - PIB per Capita: R$%.2f \
+        - Super Trunfo: %.2f\n\n", \
+        pais2, codPais2, nome2, populacao2, area2, pib2, densidadePopulacional2, pibPerCapita2, superTrunfo2);
 
-    printf("A 1° carta tem um código melhor que a 2°? (1 - Sim / 0 - Não) %d\n", codPais1 < codPais2);
-    printf("A 1° carta tem a população maior que a 2° carta? (1 - Sim / 0 - Não) %d\n", populacao1 > populacao2);
-    printf("A 1° carta tem a área maior que a 2° carta? (1 - Sim / 0 - Não) %d\n", area1 > area2);
-    printf("A 1° carta tem PIB maior que a 2°? (1 - Sim / 0 - Não) %d\n", pib1 > pib2);
-    printf("A 1° carta tem densidade populacional menor que a 2° carta? (1 - Sim / 0 - Não) %d\n", densidadePopulacional1 < densidadePopulacional2);
-    printf("A 1° carta tem o PIB per capita maior que a 2° carta? (1 - Sim / 0 - Não) %d\n", pibPerCapita1 > pibPerCapita2);
-    printf("A 1° carta tem o super trunfo maior que a 2° carta? (1 - Sim / 0 - Não) %d\n", superTrunfo1 > superTrunfo2);
+        if(codPais1 < codPais2){
+            printf("A 1° carta venceu esse duelo\n");
+        } else {
+            printf("A 2° carta venceu esse duelo\n");
+        } // Primeira comparação entre cartas, não é sugerido no exercício, mas eu lembro de quando jogava era um item importante do jogo.
+        if(populacao1 > populacao2){
+            printf("A 1° carta venceu esse duelo\n");
+        } else {
+            printf("A 2° carta venceu esse duelo\n");
+        }
+        if(area1 > area2){
+            printf("A 1° carta venceu esse duelo\n");
+        } else {
+            printf("A 2° carta venceu esse duelo\n");
+        }
+        if(pib1 > pib2){
+            printf("A 1° carta venceu esse duelo\n");
+        } else {
+            printf("A 2° carta venceu esse duelo\n");
+        }
+        if(densidadePopulacional1 < densidadePopulacional2){
+            printf("A 1° carta venceu esse duelo\n");
+        } else {
+            printf("A 2° carta venceu esse duelo\n");
+        }
+        if(pibPerCapita1 > pibPerCapita2){
+            printf("A 1° carta venceu esse duelo\n");
+        } else {
+            printf("A 2° carta venceu esse duelo\n");
+        }
+        if(superTrunfo1 > superTrunfo2){
+            printf("A 1° carta venceu esse duelo\n");
+        } else {
+            printf("A 2° carta venceu esse duelo\n");
+        }
 
     return 0;
 }
