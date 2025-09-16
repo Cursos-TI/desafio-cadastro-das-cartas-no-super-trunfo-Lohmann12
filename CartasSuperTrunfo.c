@@ -34,8 +34,6 @@ int main() {
         printf("Carta 1.\n");
         printf("Carta 2.\n");
         scanf("%d", &escolhaCarta);
-            
-        char c[100] = "dasdads";
 
         switch (escolhaCarta) {
             case 1: 
