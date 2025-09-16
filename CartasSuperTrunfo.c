@@ -2,7 +2,8 @@
 
 
 int main() {
-    printf("Desafio do jogo Super Trunfo Intermediário\n\n");
+    printf("Desafio do jogo Super Trunfo Novato\n\n");
+    // Com as regras de condição adicionadas.
 
 
     char pais1[2] = "A";
@@ -36,17 +37,16 @@ int main() {
         scanf("%d", &escolhaCarta);
 
         switch (escolhaCarta) {
-            case 1: 
-              nome1;//printf("Você joga com %s.\n\n", nome1);
+            case 1:
+                printf( "Você joga com %s.\n\n" , nome1);
             break;
-        case 2:
-            nome2;//printf("Você joga com %s.\n\n", nome2);       
-       default:
-            "nenhuma porque Você não escolheu uma opção válida, tente novamente.";
-        break;
-       };
-
-         printf( "Você joga com %s.\n\n" , c);
+            case 2:
+                printf( "Você joga com %s.\n\n" , nome2);
+            break;
+            default:
+                printf("Nenhuma, porque Você não escolheu uma opção válida, tente novamente.");
+            break;
+        }
 
         if (escolhaCarta == 1){
             printf("Escolha um dos atributos para comparar:\n");
@@ -90,7 +90,7 @@ int main() {
                 if(densidadePopulacional1 < densidadePopulacional2){
                     printf("Você venceu, a densidade populacional da sua carta é menor que a do seu oponente! (%.2f < %.2f)", densidadePopulacional1, densidadePopulacional2);
                 } else {
-                    printf("Você perdeu, a densidade populacional da carta do seu oponente é maior que a sua! (%.2f > %.2f)", densidadePopulacional1, densidadePopulacional2);
+                    printf("Você perdeu, a densidade populacional da carta do seu oponente é menor que a sua! (%.2f > %.2f)", densidadePopulacional1, densidadePopulacional2);
                 }
             break;
             case 6:
@@ -145,7 +145,7 @@ int main() {
                 if(densidadePopulacional2 < densidadePopulacional1){
                     printf("Você venceu, a densidade populacional da sua carta é menor que a do seu oponente! (%.2f < %.2f)\n", densidadePopulacional2, densidadePopulacional1);
                 } else {
-                    printf("Você perdeu, a densidade populacional da carta do seu oponente é maior que a sua! (%.2f > %.2f)\n", densidadePopulacional2, densidadePopulacional1);
+                    printf("Você perdeu, a densidade populacional da carta do seu oponente é menor que a sua! (%.2f > %.2f)\n", densidadePopulacional2, densidadePopulacional1);
                 }
             break;
             case 6:
@@ -159,51 +159,6 @@ int main() {
                 printf("Você não escolheu uma opção válida, tente novamente!");
         }
     }
-
-    /*printf("Escolha uma letra para seu 1° País (A-H) \n");
-    scanf("%1s", pais1);
-    printf("Escolha um código para sua 1° carta (01-04) \n");
-    scanf("%4s", codPais1);
-    printf("Qual o nome do seu 1° País?\n");
-    scanf("%99s", nome1);
-    printf("Qual a população do seu 1° País?\n");
-    scanf("%lu", &populacao1);
-    printf("Qual o tamanho do seu 1° País?\n");
-    scanf("%f", &area1);
-    printf("Qual o PIB do seu 1° País?\n");
-    scanf("%f", &pib1);*/
-
-    /*printf("A densidade populacional do %s é %.2f habitantes por km².\n", nome1, densidadePopulacional1);
-    printf("O PIB per capita do %s é de R$%.2f.\n", nome1, pibPerCapita1);
-    printf("O super trunfo da 1° carta é: %.2f\n\n", superTrunfo1);*/
-
-    /*printf("Escolha uma letra para seu 2° País (A-H) \n");
-    scanf("%1s", pais2);
-    printf("Escolha um código para sua 2° carta (01-04) \n");
-    scanf("%4s", codPais2);
-    printf("Qual o nome do seu 2° País?\n");
-    scanf("%99s", nome2);
-    printf("Qual a população do seu 2° País?\n");
-    scanf("%lu", &populacao2);
-    printf("Qual o tamanho do seu 2° País?\n");
-    scanf("%f", &area2);
-    printf("Qual o PIB do seu 2° País?\n");
-    scanf("%f", &pib2);
-
-    /*printf("A densidade populacional do %s é %.2f habitantes por km².\n", nome2, densidadePopulacional2);
-    printf("O PIB per capita do %s é de R$%.2f.\n", nome2, pibPerCapita2);
-    printf("O super trunfo da 2° carta é: %.2f\n\n", superTrunfo2);*/
-
-    /*printf("1° carta: %s%s - %s - População: %lu Milhões - Área: %.2f km² - PIB: R$%.2f \
-        - Densidade Populacional: %.2f habitantes por km² - PIB per Capita: R$%.2f - Super Trunfo: %.2f\n", \
-        pais1, codPais1, nome1, populacao1, area1, pib1, densidadePopulacional1, pibPerCapita1, superTrunfo1);
-        // Descobri como quebrar linhas dentro do código, facilita muito a visualização.
-    printf("2° carta: %s%s - %s \
-        - População: %lu Milhões - Área: %.2f km² - PIB: R$%.2f \
-        - Densidade Populacional: %.2f habitantes por km² - PIB per Capita: R$%.2f - Super Trunfo: %.2f\n\n", \
-        pais2, codPais2, nome2, populacao2, area2, pib2, densidadePopulacional2, pibPerCapita2, superTrunfo2);*/
-
-        
 
     return 0;
 }
